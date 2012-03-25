@@ -10,17 +10,20 @@ namespace blue_patcher
     {
         // 8b 46 ?? 2b c1 8b 54 ?? ?? 8b 6c ?? ?? 6a 00 6a 00 52 50 e8 ?? ?? ?? ?? 50 55 ff 15 ?? ?? ?? ?? 8b f0 8b 44 ?? ?? 50 ff 15 ?? ?? ?? ?? 85 f6 0f 85
         // FF 6A 00 6A 00 52 2B C1 50 8B 85 C8 FA FF FF 51 50 C6 85 D3 FA FF FF 01 FF 15 00 10 15 10 8B 8D C8 FA FF FF 51 8B F0 FF 15 74 10 15 10 85 F6 0F 85
-		// FF 6A 00 6A 00 52 2B C1 50 8B 85 C8 FA FF FF 51 50 C6 85 CF FA FF FF 01 FF 15 54 D0 14 10 8B 8D C8 FA FF FF 51 8B F0 FF 15 74 D0 14 10 8B F6 0F 85
+        // 1.2.1 FF 6A 00 6A 00 52 2B C1 50 8B 85 C8 FA FF FF 51 50 C6 85 CF FA FF FF 01 FF 15 54 D0 14 10 8B 8D C8 FA FF FF 51 8B F0 FF 15 74 D0 14 10 8B F6 0F 85
+        // 1.5.4 FF 6A 00 6A 00 52 2B C1 50 8B 85 C8 FA FF FF 51 50 C6 85 CF FA FF FF 01 FF 15 44 90 15 10 8B 8D C8 FA FF FF 51 8B F0 FF 15 1C 90 15 10 85 F6 0F 85
+
         private static readonly byte[] Bytes = new byte[]
                                            {
                                                0x6a, 0x00, 0x6a, 0x00, 0x52, 0x2b, 0xc1, 0x50, 0x8b, 0x85, 0xc8,
                                                0xfa,
                                                0xff, 0xff, 0x51, 0x50, 0xc6, 0x85, 0xcf, 0xfa, 0xff, 0xff, 0x01, 0xff,
                                                0x15,
-                                               0x54, 0xd0, 0x14, 0x10, 0x8b, 0x8d, 0xc8, 0xfa, 0xff, 0xff, 0x51, 0x8b,
+                                               0x44, 0x90, 0x15, 0x10, 0x8b, 0x8d, 0xc8, 0xfa, 0xff, 0xff, 0x51, 0x8b,
                                                0xf0,
-                                               0xff, 0x15, 0x74, 0xd0, 0x14, 0x10, 0x85, 0xf6, 0x0f, 0x85
+                                               0xff, 0x15, 0x1C, 0x90, 0x15, 0x10, 0x85, 0xf6, 0x0f, 0x85
                                            };
+
         private static readonly bool[] Mask = new bool[]
                                           {
                                               true, true, true, false, true, true, false, false, true, true, false
