@@ -13,15 +13,16 @@ namespace blue_patcher
         // 1.2.1 FF 6A 00 6A 00 52 2B C1 50 8B 85 C8 FA FF FF 51 50 C6 85 CF FA FF FF 01 FF 15 54 D0 14 10 8B 8D C8 FA FF FF 51 8B F0 FF 15 74 D0 14 10 8B F6 0F 85
         // 1.5.4 FF 6A 00 6A 00 52 2B C1 50 8B 85 C8 FA FF FF 51 50 C6 85 CF FA FF FF 01 FF 15 44 90 15 10 8B 8D C8 FA FF FF 51 8B F0 FF 15 1C 90 15 10 85 F6 0F 85
         // 1.6.5 FF 6A 00 6A 00 52 2B C1 50 8B 85 C8 FA FF FF 51 50 C6 85 CF FA FF FF 01 FF 15 00 80 15 10 8B 8D C8 FA FF FF 51 8B F0 FF 15 1C 80 15 10 85 F6 0F 85
+        //       FF 6A 00 6A 00 52 2B C1 50 8B 85 C8 FA FF FF 51 50 C6 85 CF FA FF FF 01 FF 15 44 F0 15 10 8B 8D C8 FA FF FF 51 8B F0 FF 15 1C F0 15 10 85 F6 0F 85
         private static readonly byte[] Bytes = new byte[]
                                            {
                                                0x6a, 0x00, 0x6a, 0x00, 0x52, 0x2b, 0xc1, 0x50, 0x8b, 0x85, 0xc8,
                                                0xfa,
                                                0xff, 0xff, 0x51, 0x50, 0xc6, 0x85, 0xcf, 0xfa, 0xff, 0xff, 0x01, 0xff,
                                                0x15,
-                                               0x00, 0x80, 0x15, 0x10, 0x8b, 0x8d, 0xc8, 0xfa, 0xff, 0xff, 0x51, 0x8b,
+                                               0x44, 0xF0, 0x15, 0x10, 0x8b, 0x8d, 0xc8, 0xfa, 0xff, 0xff, 0x51, 0x8b,
                                                0xf0,
-                                               0xff, 0x15, 0x1C, 0x80, 0x15, 0x10, 0x85, 0xf6, 0x0f, 0x85
+                                               0xff, 0x15, 0x1C, 0xF0, 0x15, 0x10, 0x85, 0xf6, 0x0f, 0x85
                                            };
 
         private static readonly bool[] Mask = new bool[]
